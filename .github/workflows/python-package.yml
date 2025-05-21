@@ -2,7 +2,7 @@ name: 디스코드 알림봇
 
 on:
   schedule: # UTC+9 기준 3시 실행
-    - cron:  "50 11 * * *"
+    - cron:  "35 12 * * *"
 
 jobs:
   message:
@@ -12,4 +12,11 @@ jobs:
       uses: tsickert/discord-webhook@v5.3.0
       with:
         webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-        content: "노션에 TIL 작성 해주세요!!"
+        content: |
+          🚨 **오늘의 TIL 알림** 🚨
+        
+          ✍️ **12시 전에 꼭 노션에 TIL을 작성해주세요!**
+        
+          ☕ 작성 안 하시면... **커피 쏘기!! 😱**
+        
+          👉 [노션 바로가기](https://leaf-target-bf5.notion.site/Goorm-Jandi-171be199511b80d5859fc6535c9f01e9?pvs=4)
